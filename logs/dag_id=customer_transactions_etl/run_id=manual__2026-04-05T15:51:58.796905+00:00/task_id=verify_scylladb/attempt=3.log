@@ -1,0 +1,27 @@
+[2026-04-05T18:11:50.028+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_transactions_etl.verify_scylladb manual__2026-04-05T15:51:58.796905+00:00 [queued]>
+[2026-04-05T18:11:50.034+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_transactions_etl.verify_scylladb manual__2026-04-05T15:51:58.796905+00:00 [queued]>
+[2026-04-05T18:11:50.034+0000] {taskinstance.py:2170} INFO - Starting attempt 3 of 5
+[2026-04-05T18:11:50.043+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): verify_scylladb> on 2026-04-05 15:51:58.796905+00:00
+[2026-04-05T18:11:50.048+0000] {standard_task_runner.py:60} INFO - Started process 170 to run task
+[2026-04-05T18:11:50.051+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'customer_transactions_etl', 'verify_scylladb', 'manual__2026-04-05T15:51:58.796905+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpf4so9zg4']
+[2026-04-05T18:11:50.052+0000] {standard_task_runner.py:88} INFO - Job 19: Subtask verify_scylladb
+[2026-04-05T18:11:50.091+0000] {task_command.py:423} INFO - Running <TaskInstance: customer_transactions_etl.verify_scylladb manual__2026-04-05T15:51:58.796905+00:00 [running]> on host 397b70554f8d
+[2026-04-05T18:11:50.147+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-engineering' AIRFLOW_CTX_DAG_ID='customer_transactions_etl' AIRFLOW_CTX_TASK_ID='verify_scylladb' AIRFLOW_CTX_EXECUTION_DATE='2026-04-05T15:51:58.796905+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-05T15:51:58.796905+00:00'
+[2026-04-05T18:11:50.148+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/pipeline_dag.py", line 139, in verify_scylladb_load
+    from cassandra.cluster import Cluster
+ModuleNotFoundError: No module named 'cassandra'
+[2026-04-05T18:11:50.156+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=customer_transactions_etl, task_id=verify_scylladb, execution_date=20260405T155158, start_date=20260405T181150, end_date=20260405T181150
+[2026-04-05T18:11:50.163+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 19 for task verify_scylladb (No module named 'cassandra'; 170)
+[2026-04-05T18:11:50.183+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-04-05T18:11:50.200+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

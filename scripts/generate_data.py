@@ -12,9 +12,9 @@ Usage (run inside the Spark container or locally with delta-spark installed):
 import uuid
 import random
 from datetime import datetime, timedelta, timezone
-
 from faker import Faker
 from pyspark.sql import SparkSession
+from typing import List, Dict
 from pyspark.sql.types import StructType, StructField, StringType, FloatType, TimestampType
 from delta import configure_spark_with_delta_pip
 
@@ -22,7 +22,7 @@ from delta import configure_spark_with_delta_pip
 builder = (
     SparkSession.builder
     .appName("DataGeneration")
-    .master("spark://spark-master:7077")          # change to "local[*]" for local run
+    .master("local[*]")          # change to "local[*]" for local run
     .config("spark.sql.extensions", "io.delta.sql.DeltaSparkSessionExtension")
     .config("spark.sql.catalog.spark_catalog", "org.apache.spark.sql.delta.catalog.DeltaCatalog")
     .config(
@@ -35,7 +35,7 @@ builder = (
 spark = configure_spark_with_delta_pip(builder).getOrCreate()
 spark.sparkContext.setLogLevel("WARN")
 
-DELTA_PATH = "/opt/spark/delta-lake/customer_transactions"
+DELTA_PATH = "/opt/data/delta-lake/customer_transactions"
 
 # ── Merchants and customer pool ─────────────────────────────────────────────
 fake = Faker()
@@ -55,7 +55,7 @@ def random_timestamp(days_back: int = 30) -> str:
     return dt.strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
-def generate_records(n: int = 1100) -> list[dict]:
+def generate_records(n: int = 1100) -> List[Dict]:
     """
     Generate n records including:
       - ~5% duplicates  (same transaction_id reused)

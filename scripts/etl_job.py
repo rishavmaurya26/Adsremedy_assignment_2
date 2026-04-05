@@ -26,7 +26,6 @@ from datetime import datetime
 from pyspark.sql import SparkSession, DataFrame
 from pyspark.sql import functions as F
 from pyspark.sql.window import Window
-from delta import configure_spark_with_delta_pip
 
 # ── Logging ──────────────────────────────────────────────────────────────────
 logging.basicConfig(
@@ -37,7 +36,7 @@ logging.basicConfig(
 log = logging.getLogger("ETL")
 
 # ── Configuration ─────────────────────────────────────────────────────────────
-DELTA_PATH      = "/opt/spark/delta-lake/customer_transactions"
+DELTA_PATH      = "/opt/data/delta-lake/customer_transactions"
 SCYLLA_HOST     = "scylladb"           # Docker service name
 SCYLLA_PORT     = "9042"
 SCYLLA_KEYSPACE = "transactions_ks"
@@ -49,10 +48,10 @@ SCYLLA_TABLE    = "daily_customer_totals"
 # ─────────────────────────────────────────────────────────────────────────────
 def create_spark_session() -> SparkSession:
     log.info("Creating Spark session...")
-    builder = (
+    spark = (
         SparkSession.builder
         .appName("CustomerTransactionsETL")
-        .master("spark://spark-master:7077")
+        .master("local[*]")
         .config("spark.sql.extensions", "io.delta.sql.DeltaSparkSessionExtension")
         .config(
             "spark.sql.catalog.spark_catalog",
@@ -63,13 +62,11 @@ def create_spark_session() -> SparkSession:
             "io.delta:delta-spark_2.12:3.1.0,"
             "com.datastax.spark:spark-cassandra-connector_2.12:3.5.0",
         )
-        # ScyllaDB / Cassandra connection settings
         .config("spark.cassandra.connection.host", SCYLLA_HOST)
         .config("spark.cassandra.connection.port", SCYLLA_PORT)
-        # Performance tuning
         .config("spark.sql.shuffle.partitions", "8")
+        .getOrCreate()
     )
-    spark = configure_spark_with_delta_pip(builder).getOrCreate()
     spark.sparkContext.setLogLevel("WARN")
     log.info("Spark session created ✅")
     return spark

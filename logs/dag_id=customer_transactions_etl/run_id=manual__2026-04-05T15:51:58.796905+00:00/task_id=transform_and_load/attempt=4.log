@@ -1,0 +1,237 @@
+[2026-04-05T17:49:32.250+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_transactions_etl.transform_and_load manual__2026-04-05T15:51:58.796905+00:00 [queued]>
+[2026-04-05T17:49:32.259+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_transactions_etl.transform_and_load manual__2026-04-05T15:51:58.796905+00:00 [queued]>
+[2026-04-05T17:49:32.259+0000] {taskinstance.py:2170} INFO - Starting attempt 4 of 6
+[2026-04-05T17:49:32.269+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): transform_and_load> on 2026-04-05 15:51:58.796905+00:00
+[2026-04-05T17:49:32.276+0000] {standard_task_runner.py:60} INFO - Started process 519 to run task
+[2026-04-05T17:49:32.278+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'customer_transactions_etl', 'transform_and_load', 'manual__2026-04-05T15:51:58.796905+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpzj0ylrzz']
+[2026-04-05T17:49:32.280+0000] {standard_task_runner.py:88} INFO - Job 14: Subtask transform_and_load
+[2026-04-05T17:49:32.324+0000] {task_command.py:423} INFO - Running <TaskInstance: customer_transactions_etl.transform_and_load manual__2026-04-05T15:51:58.796905+00:00 [running]> on host 397b70554f8d
+[2026-04-05T17:49:32.381+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-engineering' AIRFLOW_CTX_DAG_ID='customer_transactions_etl' AIRFLOW_CTX_TASK_ID='transform_and_load' AIRFLOW_CTX_EXECUTION_DATE='2026-04-05T15:51:58.796905+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-05T15:51:58.796905+00:00'
+[2026-04-05T17:49:36.616+0000] {pipeline_dag.py:118} INFO - :: loading settings :: url = jar:file:/opt/spark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+2026-04-05 17:49:36,543 [INFO] ============================================================
+2026-04-05 17:49:36,543 [INFO]   Customer Transactions ETL Job — START
+2026-04-05 17:49:36,543 [INFO] ============================================================
+2026-04-05 17:49:36,543 [INFO] Creating Spark session...
+Traceback (most recent call last):
+  File "/opt/scripts/etl_job.py", line 251, in <module>
+    main()
+  File "/opt/scripts/etl_job.py", line 223, in main
+    spark = create_spark_session()
+  File "/opt/scripts/etl_job.py", line 72, in create_spark_session
+    spark = configure_spark_with_delta_pip(builder).getOrCreate()
+  File "/root/.ivy2/jars/io.delta_delta-spark_2.12-3.1.0.jar/delta/pip_utils.py", line 58, in configure_spark_with_delta_pip
+ModuleNotFoundError: No module named 'importlib_metadata'
+
+[2026-04-05T17:49:36.616+0000] {pipeline_dag.py:121} ERROR - Ivy Default Cache set to: /root/.ivy2/cache
+The jars for the packages stored in: /root/.ivy2/jars
+io.delta#delta-spark_2.12 added as a dependency
+com.datastax.spark#spark-cassandra-connector_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-9921bee6-ac6a-4622-b863-023f92de41ec;1.0
+	confs: [default]
+	found io.delta#delta-spark_2.12;3.1.0 in central
+	found io.delta#delta-storage;3.1.0 in central
+	found org.antlr#antlr4-runtime;4.9.3 in central
+	found com.datastax.spark#spark-cassandra-connector_2.12;3.5.0 in central
+	found com.datastax.spark#spark-cassandra-connector-driver_2.12;3.5.0 in central
+	found org.scala-lang.modules#scala-collection-compat_2.12;2.11.0 in central
+	found com.datastax.oss#java-driver-core-shaded;4.13.0 in central
+	found com.datastax.oss#native-protocol;1.5.0 in central
+	found com.datastax.oss#java-driver-shaded-guava;25.1-jre-graal-sub-1 in central
+	found com.typesafe#config;1.4.1 in central
+	found org.slf4j#slf4j-api;1.7.26 in central
+	found io.dropwizard.metrics#metrics-core;4.1.18 in central
+	found org.hdrhistogram#HdrHistogram;2.1.12 in central
+	found org.reactivestreams#reactive-streams;1.0.3 in central
+	found com.github.stephenc.jcip#jcip-annotations;1.0-1 in central
+	found com.github.spotbugs#spotbugs-annotations;3.1.12 in central
+	found com.google.code.findbugs#jsr305;3.0.2 in central
+	found com.datastax.oss#java-driver-mapper-runtime;4.13.0 in central
+	found com.datastax.oss#java-driver-query-builder;4.13.0 in central
+	found org.apache.commons#commons-lang3;3.10 in central
+	found com.thoughtworks.paranamer#paranamer;2.8 in central
+	found org.scala-lang#scala-reflect;2.12.11 in central
+:: resolution report :: resolve 469ms :: artifacts dl 28ms
+	:: modules in use:
+	com.datastax.oss#java-driver-core-shaded;4.13.0 from central in [default]
+	com.datastax.oss#java-driver-mapper-runtime;4.13.0 from central in [default]
+	com.datastax.oss#java-driver-query-builder;4.13.0 from central in [default]
+	com.datastax.oss#java-driver-shaded-guava;25.1-jre-graal-sub-1 from central in [default]
+	com.datastax.oss#native-protocol;1.5.0 from central in [default]
+	com.datastax.spark#spark-cassandra-connector-driver_2.12;3.5.0 from central in [default]
+	com.datastax.spark#spark-cassandra-connector_2.12;3.5.0 from central in [default]
+	com.github.spotbugs#spotbugs-annotations;3.1.12 from central in [default]
+	com.github.stephenc.jcip#jcip-annotations;1.0-1 from central in [default]
+	com.google.code.findbugs#jsr305;3.0.2 from central in [default]
+	com.thoughtworks.paranamer#paranamer;2.8 from central in [default]
+	com.typesafe#config;1.4.1 from central in [default]
+	io.delta#delta-spark_2.12;3.1.0 from central in [default]
+	io.delta#delta-storage;3.1.0 from central in [default]
+	io.dropwizard.metrics#metrics-core;4.1.18 from central in [default]
+	org.antlr#antlr4-runtime;4.9.3 from central in [default]
+	org.apache.commons#commons-lang3;3.10 from central in [default]
+	org.hdrhistogram#HdrHistogram;2.1.12 from central in [default]
+	org.reactivestreams#reactive-streams;1.0.3 from central in [default]
+	org.scala-lang#scala-reflect;2.12.11 from central in [default]
+	org.scala-lang.modules#scala-collection-compat_2.12;2.11.0 from central in [default]
+	org.slf4j#slf4j-api;1.7.26 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   22  |   0   |   0   |   0   ||   22  |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-9921bee6-ac6a-4622-b863-023f92de41ec
+	confs: [default]
+	0 artifacts copied, 22 already retrieved (0kB/17ms)
+26/04/05 17:49:34 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/04/05 17:49:36 INFO ShutdownHookManager: Shutdown hook called
+26/04/05 17:49:36 INFO ShutdownHookManager: Deleting directory /tmp/spark-c9b9937d-c82e-49fd-92c5-1b694034ba58
+
+[2026-04-05T17:49:36.617+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/pipeline_dag.py", line 122, in run_spark_etl
+    raise Exception(f"Spark job failed with return code {result.returncode}\n{result.stderr}")
+Exception: Spark job failed with return code 1
+Ivy Default Cache set to: /root/.ivy2/cache
+The jars for the packages stored in: /root/.ivy2/jars
+io.delta#delta-spark_2.12 added as a dependency
+com.datastax.spark#spark-cassandra-connector_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-9921bee6-ac6a-4622-b863-023f92de41ec;1.0
+	confs: [default]
+	found io.delta#delta-spark_2.12;3.1.0 in central
+	found io.delta#delta-storage;3.1.0 in central
+	found org.antlr#antlr4-runtime;4.9.3 in central
+	found com.datastax.spark#spark-cassandra-connector_2.12;3.5.0 in central
+	found com.datastax.spark#spark-cassandra-connector-driver_2.12;3.5.0 in central
+	found org.scala-lang.modules#scala-collection-compat_2.12;2.11.0 in central
+	found com.datastax.oss#java-driver-core-shaded;4.13.0 in central
+	found com.datastax.oss#native-protocol;1.5.0 in central
+	found com.datastax.oss#java-driver-shaded-guava;25.1-jre-graal-sub-1 in central
+	found com.typesafe#config;1.4.1 in central
+	found org.slf4j#slf4j-api;1.7.26 in central
+	found io.dropwizard.metrics#metrics-core;4.1.18 in central
+	found org.hdrhistogram#HdrHistogram;2.1.12 in central
+	found org.reactivestreams#reactive-streams;1.0.3 in central
+	found com.github.stephenc.jcip#jcip-annotations;1.0-1 in central
+	found com.github.spotbugs#spotbugs-annotations;3.1.12 in central
+	found com.google.code.findbugs#jsr305;3.0.2 in central
+	found com.datastax.oss#java-driver-mapper-runtime;4.13.0 in central
+	found com.datastax.oss#java-driver-query-builder;4.13.0 in central
+	found org.apache.commons#commons-lang3;3.10 in central
+	found com.thoughtworks.paranamer#paranamer;2.8 in central
+	found org.scala-lang#scala-reflect;2.12.11 in central
+:: resolution report :: resolve 469ms :: artifacts dl 28ms
+	:: modules in use:
+	com.datastax.oss#java-driver-core-shaded;4.13.0 from central in [default]
+	com.datastax.oss#java-driver-mapper-runtime;4.13.0 from central in [default]
+	com.datastax.oss#java-driver-query-builder;4.13.0 from central in [default]
+	com.datastax.oss#java-driver-shaded-guava;25.1-jre-graal-sub-1 from central in [default]
+	com.datastax.oss#native-protocol;1.5.0 from central in [default]
+	com.datastax.spark#spark-cassandra-connector-driver_2.12;3.5.0 from central in [default]
+	com.datastax.spark#spark-cassandra-connector_2.12;3.5.0 from central in [default]
+	com.github.spotbugs#spotbugs-annotations;3.1.12 from central in [default]
+	com.github.stephenc.jcip#jcip-annotations;1.0-1 from central in [default]
+	com.google.code.findbugs#jsr305;3.0.2 from central in [default]
+	com.thoughtworks.paranamer#paranamer;2.8 from central in [default]
+	com.typesafe#config;1.4.1 from central in [default]
+	io.delta#delta-spark_2.12;3.1.0 from central in [default]
+	io.delta#delta-storage;3.1.0 from central in [default]
+	io.dropwizard.metrics#metrics-core;4.1.18 from central in [default]
+	org.antlr#antlr4-runtime;4.9.3 from central in [default]
+	org.apache.commons#commons-lang3;3.10 from central in [default]
+	org.hdrhistogram#HdrHistogram;2.1.12 from central in [default]
+	org.reactivestreams#reactive-streams;1.0.3 from central in [default]
+	org.scala-lang#scala-reflect;2.12.11 from central in [default]
+	org.scala-lang.modules#scala-collection-compat_2.12;2.11.0 from central in [default]
+	org.slf4j#slf4j-api;1.7.26 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   22  |   0   |   0   |   0   ||   22  |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-9921bee6-ac6a-4622-b863-023f92de41ec
+	confs: [default]
+	0 artifacts copied, 22 already retrieved (0kB/17ms)
+26/04/05 17:49:34 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/04/05 17:49:36 INFO ShutdownHookManager: Shutdown hook called
+26/04/05 17:49:36 INFO ShutdownHookManager: Deleting directory /tmp/spark-c9b9937d-c82e-49fd-92c5-1b694034ba58
+
+[2026-04-05T17:49:36.626+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=customer_transactions_etl, task_id=transform_and_load, execution_date=20260405T155158, start_date=20260405T174932, end_date=20260405T174936
+[2026-04-05T17:49:36.637+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 14 for task transform_and_load (Spark job failed with return code 1
+Ivy Default Cache set to: /root/.ivy2/cache
+The jars for the packages stored in: /root/.ivy2/jars
+io.delta#delta-spark_2.12 added as a dependency
+com.datastax.spark#spark-cassandra-connector_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-9921bee6-ac6a-4622-b863-023f92de41ec;1.0
+	confs: [default]
+	found io.delta#delta-spark_2.12;3.1.0 in central
+	found io.delta#delta-storage;3.1.0 in central
+	found org.antlr#antlr4-runtime;4.9.3 in central
+	found com.datastax.spark#spark-cassandra-connector_2.12;3.5.0 in central
+	found com.datastax.spark#spark-cassandra-connector-driver_2.12;3.5.0 in central
+	found org.scala-lang.modules#scala-collection-compat_2.12;2.11.0 in central
+	found com.datastax.oss#java-driver-core-shaded;4.13.0 in central
+	found com.datastax.oss#native-protocol;1.5.0 in central
+	found com.datastax.oss#java-driver-shaded-guava;25.1-jre-graal-sub-1 in central
+	found com.typesafe#config;1.4.1 in central
+	found org.slf4j#slf4j-api;1.7.26 in central
+	found io.dropwizard.metrics#metrics-core;4.1.18 in central
+	found org.hdrhistogram#HdrHistogram;2.1.12 in central
+	found org.reactivestreams#reactive-streams;1.0.3 in central
+	found com.github.stephenc.jcip#jcip-annotations;1.0-1 in central
+	found com.github.spotbugs#spotbugs-annotations;3.1.12 in central
+	found com.google.code.findbugs#jsr305;3.0.2 in central
+	found com.datastax.oss#java-driver-mapper-runtime;4.13.0 in central
+	found com.datastax.oss#java-driver-query-builder;4.13.0 in central
+	found org.apache.commons#commons-lang3;3.10 in central
+	found com.thoughtworks.paranamer#paranamer;2.8 in central
+	found org.scala-lang#scala-reflect;2.12.11 in central
+:: resolution report :: resolve 469ms :: artifacts dl 28ms
+	:: modules in use:
+	com.datastax.oss#java-driver-core-shaded;4.13.0 from central in [default]
+	com.datastax.oss#java-driver-mapper-runtime;4.13.0 from central in [default]
+	com.datastax.oss#java-driver-query-builder;4.13.0 from central in [default]
+	com.datastax.oss#java-driver-shaded-guava;25.1-jre-graal-sub-1 from central in [default]
+	com.datastax.oss#native-protocol;1.5.0 from central in [default]
+	com.datastax.spark#spark-cassandra-connector-driver_2.12;3.5.0 from central in [default]
+	com.datastax.spark#spark-cassandra-connector_2.12;3.5.0 from central in [default]
+	com.github.spotbugs#spotbugs-annotations;3.1.12 from central in [default]
+	com.github.stephenc.jcip#jcip-annotations;1.0-1 from central in [default]
+	com.google.code.findbugs#jsr305;3.0.2 from central in [default]
+	com.thoughtworks.paranamer#paranamer;2.8 from central in [default]
+	com.typesafe#config;1.4.1 from central in [default]
+	io.delta#delta-spark_2.12;3.1.0 from central in [default]
+	io.delta#delta-storage;3.1.0 from central in [default]
+	io.dropwizard.metrics#metrics-core;4.1.18 from central in [default]
+	org.antlr#antlr4-runtime;4.9.3 from central in [default]
+	org.apache.commons#commons-lang3;3.10 from central in [default]
+	org.hdrhistogram#HdrHistogram;2.1.12 from central in [default]
+	org.reactivestreams#reactive-streams;1.0.3 from central in [default]
+	org.scala-lang#scala-reflect;2.12.11 from central in [default]
+	org.scala-lang.modules#scala-collection-compat_2.12;2.11.0 from central in [default]
+	org.slf4j#slf4j-api;1.7.26 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   22  |   0   |   0   |   0   ||   22  |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-9921bee6-ac6a-4622-b863-023f92de41ec
+	confs: [default]
+	0 artifacts copied, 22 already retrieved (0kB/17ms)
+26/04/05 17:49:34 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/04/05 17:49:36 INFO ShutdownHookManager: Shutdown hook called
+26/04/05 17:49:36 INFO ShutdownHookManager: Deleting directory /tmp/spark-c9b9937d-c82e-49fd-92c5-1b694034ba58
+; 519)
+[2026-04-05T17:49:36.669+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-04-05T17:49:36.686+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

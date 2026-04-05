@@ -1,27 +1,5 @@
 version: '3.8'
 
-x-airflow-common: &airflow-common
-  image: apache/airflow:2.8.1-python3.11
-  environment:
-    AIRFLOW__CORE__EXECUTOR: LocalExecutor
-    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
-    AIRFLOW__CORE__FERNET_KEY: 'ZmDfcTF7_60GrrY167zsiPd67pEvs0aGOv2oasOM1Pg='
-    AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'false'
-    AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
-    AIRFLOW__WEBSERVER__EXPOSE_CONFIG: 'true'
-    PYTHONPATH: /opt/airflow
-  volumes:
-    - ./dags:/opt/airflow/dags
-    - ./logs:/opt/airflow/logs
-    - ./plugins:/opt/airflow/plugins
-    - ./spark_jobs:/opt/airflow/spark_jobs
-    - ./data/delta-lake:/opt/airflow/delta-lake
-  depends_on:
-    postgres:
-      condition: service_healthy
-  networks:
-    - de_network
-
 services:
   # ─────────────────────────────────────────────
   # PostgreSQL — Airflow metadata database
@@ -67,7 +45,7 @@ services:
   # Spark Master
   # ─────────────────────────────────────────────
   spark-master:
-    image: apache/spark:4.0.2-python3
+    image: apache/spark:3.5.3-python3
     container_name: spark_master
     user: root
     environment:
@@ -95,7 +73,7 @@ services:
   # Spark Worker
   # ─────────────────────────────────────────────
   spark-worker:
-    image: apache/spark:4.0.2-python3
+    image: apache/spark:3.5.3-python3
     container_name: spark_worker
     user: root
     environment:
@@ -120,54 +98,78 @@ services:
   # Airflow — Init DB + create admin user
   # ─────────────────────────────────────────────
   airflow-init:
-    <<: *airflow-common
-    container_name: airflow-init
-    command: >
-      bash -c "
-        airflow db upgrade &&
-        airflow users create
-          --username admin
-          --password admin
-          --firstname Admin
-          --lastname User
-          --role Admin
-          --email admin@example.com
-      "
-    restart: "no"
+    image: apache/airflow:2.8.1-python3.11
+    container_name: airflow_init
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+      _AIRFLOW_DB_MIGRATE: 'true'
+      _AIRFLOW_WWW_USER_CREATE: 'true'
+      _AIRFLOW_WWW_USER_USERNAME: admin
+      _AIRFLOW_WWW_USER_PASSWORD: admin
+      _AIRFLOW_WWW_USER_EMAIL: admin@example.com
+      _AIRFLOW_WWW_USER_FIRSTNAME: Admin
+      _AIRFLOW_WWW_USER_LASTNAME: User
+      _AIRFLOW_WWW_USER_ROLE: Admin
+    entrypoint: /bin/bash
+    command: -c "exec /entrypoint airflow version"
+    networks:
+      - de_network
+    restart: no
 
-  # ─────────────────────────────────────────────
-  # Airflow Webserver
-  # ─────────────────────────────────────────────
   airflow-webserver:
-    <<: *airflow-common
-    container_name: airflow-webserver
+    image: apache/airflow:2.8.1-python3.11
+    container_name: airflow_webserver
     command: webserver
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+      AIRFLOW__CORE__FERNET_KEY: 'ZmDfcTF7_60GrrY167zsiPd67pEvs0aGOv2oasOM1Pg='
+      AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+    user: root
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./data/delta-lake:/opt/airflow/delta-lake
+      - ./spark_jobs:/opt/airflow/spark_jobs
+      - /var/run/docker.sock:/var/run/docker.sock  
     ports:
-      - "8081:8080"   # Airflow UI (8081 to avoid conflict with Spark UI)
-    healthcheck:
-      test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
-      interval: 30s
-      timeout: 10s
-      retries: 5
+      - "8082:8080"
     depends_on:
-      airflow-init:
-        condition: service_completed_successfully
+      postgres:
+        condition: service_healthy
+    networks:
+      - de_network
 
-  # ─────────────────────────────────────────────
-  # Airflow Scheduler
-  # ─────────────────────────────────────────────
   airflow-scheduler:
-    <<: *airflow-common
-    container_name: airflow-scheduler
+    image: apache/airflow:2.8.1-python3.11
+    container_name: airflow_scheduler
     command: scheduler
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+      AIRFLOW__CORE__FERNET_KEY: 'ZmDfcTF7_60GrrY167zsiPd67pEvs0aGOv2oasOM1Pg='
+      AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+    user: root
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./data/delta-lake:/opt/airflow/delta-lake
+      - ./spark_jobs:/opt/airflow/spark_jobs
+      - /var/run/docker.sock:/var/run/docker.sock  
     depends_on:
-      airflow-init:
-        condition: service_completed_successfully
-
+      postgres:
+        condition: service_healthy
+    networks:
+      - de_network
 volumes:
   postgres_data:
   scylla_data:
-  spark_ivy:
 
 networks:
   de_network:

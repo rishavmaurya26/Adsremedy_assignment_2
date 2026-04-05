@@ -1,0 +1,91 @@
+[2026-04-05T17:28:05.087+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_transactions_etl.transform_and_load scheduled__2026-04-04T02:00:00+00:00 [queued]>
+[2026-04-05T17:28:05.096+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_transactions_etl.transform_and_load scheduled__2026-04-04T02:00:00+00:00 [queued]>
+[2026-04-05T17:28:05.096+0000] {taskinstance.py:2170} INFO - Starting attempt 4 of 4
+[2026-04-05T17:28:05.105+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): transform_and_load> on 2026-04-04 02:00:00+00:00
+[2026-04-05T17:28:05.110+0000] {standard_task_runner.py:60} INFO - Started process 170 to run task
+[2026-04-05T17:28:05.113+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'customer_transactions_etl', 'transform_and_load', 'scheduled__2026-04-04T02:00:00+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmp98_is8et']
+[2026-04-05T17:28:05.114+0000] {standard_task_runner.py:88} INFO - Job 9: Subtask transform_and_load
+[2026-04-05T17:28:05.178+0000] {task_command.py:423} INFO - Running <TaskInstance: customer_transactions_etl.transform_and_load scheduled__2026-04-04T02:00:00+00:00 [running]> on host 397b70554f8d
+[2026-04-05T17:28:05.255+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-engineering' AIRFLOW_CTX_DAG_ID='customer_transactions_etl' AIRFLOW_CTX_TASK_ID='transform_and_load' AIRFLOW_CTX_EXECUTION_DATE='2026-04-04T02:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-04-04T02:00:00+00:00'
+[2026-04-05T17:28:05.256+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-04-05T17:28:05.257+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\ndocker exec spark_master         /opt/spark/bin/spark-submit           --master local[*]           --packages io.delta:delta-spark_2.12:3.1.0,com.datastax.spark:spark-cassandra-connector_2.12:3.5.0           --conf spark.sql.extensions=io.delta.sql.DeltaSparkSessionExtension           --conf spark.sql.catalog.spark_catalog=org.apache.spark.sql.delta.catalog.DeltaCatalog           /opt/scripts/etl_job.py']
+[2026-04-05T17:28:05.269+0000] {subprocess.py:86} INFO - Output:
+[2026-04-05T17:28:09.528+0000] {subprocess.py:93} INFO - :: loading settings :: url = jar:file:/opt/spark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2026-04-05T17:28:10.049+0000] {subprocess.py:93} INFO - Ivy Default Cache set to: /root/.ivy2/cache
+[2026-04-05T17:28:10.050+0000] {subprocess.py:93} INFO - The jars for the packages stored in: /root/.ivy2/jars
+[2026-04-05T17:28:10.054+0000] {subprocess.py:93} INFO - io.delta#delta-spark_2.12 added as a dependency
+[2026-04-05T17:28:10.054+0000] {subprocess.py:93} INFO - com.datastax.spark#spark-cassandra-connector_2.12 added as a dependency
+[2026-04-05T17:28:10.055+0000] {subprocess.py:93} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-e3f379e4-1a74-452d-8f93-c4acb8291b6f;1.0
+[2026-04-05T17:28:10.056+0000] {subprocess.py:93} INFO - 	confs: [default]
+[2026-04-05T17:28:10.401+0000] {subprocess.py:93} INFO - 	found io.delta#delta-spark_2.12;3.1.0 in central
+[2026-04-05T17:28:10.427+0000] {subprocess.py:93} INFO - 	found io.delta#delta-storage;3.1.0 in central
+[2026-04-05T17:28:10.453+0000] {subprocess.py:93} INFO - 	found org.antlr#antlr4-runtime;4.9.3 in central
+[2026-04-05T17:28:10.532+0000] {subprocess.py:93} INFO - 	found com.datastax.spark#spark-cassandra-connector_2.12;3.5.0 in central
+[2026-04-05T17:28:10.608+0000] {subprocess.py:93} INFO - 	found com.datastax.spark#spark-cassandra-connector-driver_2.12;3.5.0 in central
+[2026-04-05T17:28:10.638+0000] {subprocess.py:93} INFO - 	found org.scala-lang.modules#scala-collection-compat_2.12;2.11.0 in central
+[2026-04-05T17:28:10.673+0000] {subprocess.py:93} INFO - 	found com.datastax.oss#java-driver-core-shaded;4.13.0 in central
+[2026-04-05T17:28:10.693+0000] {subprocess.py:93} INFO - 	found com.datastax.oss#native-protocol;1.5.0 in central
+[2026-04-05T17:28:10.721+0000] {subprocess.py:93} INFO - 	found com.datastax.oss#java-driver-shaded-guava;25.1-jre-graal-sub-1 in central
+[2026-04-05T17:28:10.741+0000] {subprocess.py:93} INFO - 	found com.typesafe#config;1.4.1 in central
+[2026-04-05T17:28:10.758+0000] {subprocess.py:93} INFO - 	found org.slf4j#slf4j-api;1.7.26 in central
+[2026-04-05T17:28:10.774+0000] {subprocess.py:93} INFO - 	found io.dropwizard.metrics#metrics-core;4.1.18 in central
+[2026-04-05T17:28:10.787+0000] {subprocess.py:93} INFO - 	found org.hdrhistogram#HdrHistogram;2.1.12 in central
+[2026-04-05T17:28:10.801+0000] {subprocess.py:93} INFO - 	found org.reactivestreams#reactive-streams;1.0.3 in central
+[2026-04-05T17:28:10.816+0000] {subprocess.py:93} INFO - 	found com.github.stephenc.jcip#jcip-annotations;1.0-1 in central
+[2026-04-05T17:28:10.868+0000] {subprocess.py:93} INFO - 	found com.github.spotbugs#spotbugs-annotations;3.1.12 in central
+[2026-04-05T17:28:10.880+0000] {subprocess.py:93} INFO - 	found com.google.code.findbugs#jsr305;3.0.2 in central
+[2026-04-05T17:28:10.899+0000] {subprocess.py:93} INFO - 	found com.datastax.oss#java-driver-mapper-runtime;4.13.0 in central
+[2026-04-05T17:28:10.955+0000] {subprocess.py:93} INFO - 	found com.datastax.oss#java-driver-query-builder;4.13.0 in central
+[2026-04-05T17:28:10.970+0000] {subprocess.py:93} INFO - 	found org.apache.commons#commons-lang3;3.10 in central
+[2026-04-05T17:28:10.980+0000] {subprocess.py:93} INFO - 	found com.thoughtworks.paranamer#paranamer;2.8 in central
+[2026-04-05T17:28:10.991+0000] {subprocess.py:93} INFO - 	found org.scala-lang#scala-reflect;2.12.11 in central
+[2026-04-05T17:28:11.038+0000] {subprocess.py:93} INFO - :: resolution report :: resolve 955ms :: artifacts dl 25ms
+[2026-04-05T17:28:11.038+0000] {subprocess.py:93} INFO - 	:: modules in use:
+[2026-04-05T17:28:11.038+0000] {subprocess.py:93} INFO - 	com.datastax.oss#java-driver-core-shaded;4.13.0 from central in [default]
+[2026-04-05T17:28:11.038+0000] {subprocess.py:93} INFO - 	com.datastax.oss#java-driver-mapper-runtime;4.13.0 from central in [default]
+[2026-04-05T17:28:11.039+0000] {subprocess.py:93} INFO - 	com.datastax.oss#java-driver-query-builder;4.13.0 from central in [default]
+[2026-04-05T17:28:11.039+0000] {subprocess.py:93} INFO - 	com.datastax.oss#java-driver-shaded-guava;25.1-jre-graal-sub-1 from central in [default]
+[2026-04-05T17:28:11.039+0000] {subprocess.py:93} INFO - 	com.datastax.oss#native-protocol;1.5.0 from central in [default]
+[2026-04-05T17:28:11.039+0000] {subprocess.py:93} INFO - 	com.datastax.spark#spark-cassandra-connector-driver_2.12;3.5.0 from central in [default]
+[2026-04-05T17:28:11.039+0000] {subprocess.py:93} INFO - 	com.datastax.spark#spark-cassandra-connector_2.12;3.5.0 from central in [default]
+[2026-04-05T17:28:11.040+0000] {subprocess.py:93} INFO - 	com.github.spotbugs#spotbugs-annotations;3.1.12 from central in [default]
+[2026-04-05T17:28:11.040+0000] {subprocess.py:93} INFO - 	com.github.stephenc.jcip#jcip-annotations;1.0-1 from central in [default]
+[2026-04-05T17:28:11.040+0000] {subprocess.py:93} INFO - 	com.google.code.findbugs#jsr305;3.0.2 from central in [default]
+[2026-04-05T17:28:11.041+0000] {subprocess.py:93} INFO - 	com.thoughtworks.paranamer#paranamer;2.8 from central in [default]
+[2026-04-05T17:28:11.041+0000] {subprocess.py:93} INFO - 	com.typesafe#config;1.4.1 from central in [default]
+[2026-04-05T17:28:11.041+0000] {subprocess.py:93} INFO - 	io.delta#delta-spark_2.12;3.1.0 from central in [default]
+[2026-04-05T17:28:11.041+0000] {subprocess.py:93} INFO - 	io.delta#delta-storage;3.1.0 from central in [default]
+[2026-04-05T17:28:11.041+0000] {subprocess.py:93} INFO - 	io.dropwizard.metrics#metrics-core;4.1.18 from central in [default]
+[2026-04-05T17:28:11.042+0000] {subprocess.py:93} INFO - 	org.antlr#antlr4-runtime;4.9.3 from central in [default]
+[2026-04-05T17:28:11.044+0000] {subprocess.py:93} INFO - 	org.apache.commons#commons-lang3;3.10 from central in [default]
+[2026-04-05T17:28:11.044+0000] {subprocess.py:93} INFO - 	org.hdrhistogram#HdrHistogram;2.1.12 from central in [default]
+[2026-04-05T17:28:11.044+0000] {subprocess.py:93} INFO - 	org.reactivestreams#reactive-streams;1.0.3 from central in [default]
+[2026-04-05T17:28:11.044+0000] {subprocess.py:93} INFO - 	org.scala-lang#scala-reflect;2.12.11 from central in [default]
+[2026-04-05T17:28:11.045+0000] {subprocess.py:93} INFO - 	org.scala-lang.modules#scala-collection-compat_2.12;2.11.0 from central in [default]
+[2026-04-05T17:28:11.045+0000] {subprocess.py:93} INFO - 	org.slf4j#slf4j-api;1.7.26 from central in [default]
+[2026-04-05T17:28:11.047+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2026-04-05T17:28:11.047+0000] {subprocess.py:93} INFO - 	|                  |            modules            ||   artifacts   |
+[2026-04-05T17:28:11.048+0000] {subprocess.py:93} INFO - 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2026-04-05T17:28:11.048+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2026-04-05T17:28:11.048+0000] {subprocess.py:93} INFO - 	|      default     |   22  |   0   |   0   |   0   ||   22  |   0   |
+[2026-04-05T17:28:11.048+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2026-04-05T17:28:11.048+0000] {subprocess.py:93} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-e3f379e4-1a74-452d-8f93-c4acb8291b6f
+[2026-04-05T17:28:11.049+0000] {subprocess.py:93} INFO - 	confs: [default]
+[2026-04-05T17:28:11.059+0000] {subprocess.py:93} INFO - 	0 artifacts copied, 22 already retrieved (0kB/14ms)
+[2026-04-05T17:28:11.303+0000] {subprocess.py:93} INFO - 26/04/05 17:28:11 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-04-05T17:28:13.650+0000] {subprocess.py:93} INFO - python3: can't open file '/opt/scripts/etl_job.py': [Errno 2] No such file or directory
+[2026-04-05T17:28:13.663+0000] {subprocess.py:93} INFO - 26/04/05 17:28:13 INFO ShutdownHookManager: Shutdown hook called
+[2026-04-05T17:28:13.664+0000] {subprocess.py:93} INFO - 26/04/05 17:28:13 INFO ShutdownHookManager: Deleting directory /tmp/spark-f8a5f010-8e9a-482e-9f9c-a9d8aed76a6f
+[2026-04-05T17:28:13.701+0000] {subprocess.py:97} INFO - Command exited with return code 2
+[2026-04-05T17:28:13.713+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2026-04-05T17:28:13.716+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=customer_transactions_etl, task_id=transform_and_load, execution_date=20260404T020000, start_date=20260405T172805, end_date=20260405T172813
+[2026-04-05T17:28:13.725+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 9 for task transform_and_load (Bash command failed. The command returned a non-zero exit code 2.; 170)
+[2026-04-05T17:28:13.756+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-04-05T17:28:13.774+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
