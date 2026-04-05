@@ -1,0 +1,174 @@
+version: '3.8'
+
+x-airflow-common: &airflow-common
+  image: apache/airflow:2.8.1-python3.11
+  environment:
+    AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+    AIRFLOW__CORE__FERNET_KEY: 'ZmDfcTF7_60GrrY167zsiPd67pEvs0aGOv2oasOM1Pg='
+    AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'false'
+    AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+    AIRFLOW__WEBSERVER__EXPOSE_CONFIG: 'true'
+    PYTHONPATH: /opt/airflow
+  volumes:
+    - ./dags:/opt/airflow/dags
+    - ./logs:/opt/airflow/logs
+    - ./plugins:/opt/airflow/plugins
+    - ./spark_jobs:/opt/airflow/spark_jobs
+    - ./data/delta-lake:/opt/airflow/delta-lake
+  depends_on:
+    postgres:
+      condition: service_healthy
+  networks:
+    - de_network
+
+services:
+  # ─────────────────────────────────────────────
+  # PostgreSQL — Airflow metadata database
+  # ─────────────────────────────────────────────
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "airflow"]
+      interval: 10s
+      retries: 5
+    networks:
+      - de_network
+
+  # ─────────────────────────────────────────────
+  # ScyllaDB — Target analytics database
+  # ─────────────────────────────────────────────
+  scylladb:
+    image: scylladb/scylla:5.4
+    container_name: scylladb
+    command: --smp 1 --memory 512M --overprovisioned 1 --api-address 0.0.0.0
+    ports:
+      - "9042:9042"   # CQL port
+      - "9180:9180"   # Prometheus metrics
+    volumes:
+      - scylla_data:/var/lib/scylla
+      - ./scripts/init_scylla.cql:/init_scylla.cql
+    healthcheck:
+      test: ["CMD-SHELL", "cqlsh -e 'describe keyspaces' 2>/dev/null || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 10
+      start_period: 60s
+    networks:
+      - de_network
+
+  # ─────────────────────────────────────────────
+  # Spark Master
+  # ─────────────────────────────────────────────
+  spark-master:
+    image: apache/spark:4.0.2-python3
+    container_name: spark_master
+    user: root
+    environment:
+      - SPARK_NO_DAEMONIZE=true
+    command: >
+      bash -c "/opt/spark/bin/spark-class
+      org.apache.spark.deploy.master.Master
+      --host spark-master
+      --port 7077
+      --webui-port 8080"
+    ports:
+      - "8080:8080"               # Spark Web UI
+      - "7077:7077"               # Spark master port
+    volumes:
+      - ./scripts:/opt/scripts
+      - ./data:/opt/data
+      - ./jars:/opt/spark/jars/extra
+    networks:
+      - de_network
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  # ─────────────────────────────────────────────
+  # Spark Worker
+  # ─────────────────────────────────────────────
+  spark-worker:
+    image: apache/spark:4.0.2-python3
+    container_name: spark_worker
+    user: root
+    environment:
+      - SPARK_NO_DAEMONIZE=true
+    command: >
+      bash -c "/opt/spark/bin/spark-class
+      org.apache.spark.deploy.worker.Worker
+      spark://spark-master:7077
+      --webui-port 8081"
+    ports:
+      - "8081:8081"               # Worker Web UI
+    volumes:
+      - ./scripts:/opt/scripts
+      - ./data:/opt/data
+      - ./jars:/opt/spark/jars/extra
+    networks:
+      - de_network
+    depends_on:
+      - spark-master
+
+  # ─────────────────────────────────────────────
+  # Airflow — Init DB + create admin user
+  # ─────────────────────────────────────────────
+  airflow-init:
+    <<: *airflow-common
+    container_name: airflow-init
+    command: >
+      bash -c "
+        airflow db upgrade &&
+        airflow users create
+          --username admin
+          --password admin
+          --firstname Admin
+          --lastname User
+          --role Admin
+          --email admin@example.com
+      "
+    restart: "no"
+
+  # ─────────────────────────────────────────────
+  # Airflow Webserver
+  # ─────────────────────────────────────────────
+  airflow-webserver:
+    <<: *airflow-common
+    container_name: airflow-webserver
+    command: webserver
+    ports:
+      - "8081:8080"   # Airflow UI (8081 to avoid conflict with Spark UI)
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+
+  # ─────────────────────────────────────────────
+  # Airflow Scheduler
+  # ─────────────────────────────────────────────
+  airflow-scheduler:
+    <<: *airflow-common
+    container_name: airflow-scheduler
+    command: scheduler
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+
+volumes:
+  postgres_data:
+  scylla_data:
+  spark_ivy:
+
+networks:
+  de_network:
+    driver: bridge
