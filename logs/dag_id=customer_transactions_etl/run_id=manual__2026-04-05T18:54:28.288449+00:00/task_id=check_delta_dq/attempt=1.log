@@ -1,0 +1,19 @@
+[2026-04-05T18:54:55.964+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_transactions_etl.check_delta_dq manual__2026-04-05T18:54:28.288449+00:00 [queued]>
+[2026-04-05T18:54:55.971+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_transactions_etl.check_delta_dq manual__2026-04-05T18:54:28.288449+00:00 [queued]>
+[2026-04-05T18:54:55.972+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2026-04-05T18:54:55.981+0000] {taskinstance.py:2191} INFO - Executing <Task(BranchPythonOperator): check_delta_dq> on 2026-04-05 18:54:28.288449+00:00
+[2026-04-05T18:54:55.986+0000] {standard_task_runner.py:60} INFO - Started process 815 to run task
+[2026-04-05T18:54:55.988+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'customer_transactions_etl', 'check_delta_dq', 'manual__2026-04-05T18:54:28.288449+00:00', '--job-id', '32', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpts5uot0f']
+[2026-04-05T18:54:55.990+0000] {standard_task_runner.py:88} INFO - Job 32: Subtask check_delta_dq
+[2026-04-05T18:54:56.024+0000] {task_command.py:423} INFO - Running <TaskInstance: customer_transactions_etl.check_delta_dq manual__2026-04-05T18:54:28.288449+00:00 [running]> on host 397b70554f8d
+[2026-04-05T18:54:56.084+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-engineering' AIRFLOW_CTX_DAG_ID='customer_transactions_etl' AIRFLOW_CTX_TASK_ID='check_delta_dq' AIRFLOW_CTX_EXECUTION_DATE='2026-04-05T18:54:28.288449+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-05T18:54:28.288449+00:00'
+[2026-04-05T18:54:56.085+0000] {pipeline_dag.py:64} INFO - Checking Delta table at /opt/***/delta-lake/customer_transactions ...
+[2026-04-05T18:54:56.085+0000] {pipeline_dag.py:70} INFO - Found 24 parquet files
+[2026-04-05T18:54:56.096+0000] {pipeline_dag.py:76} INFO - Delta table check passed ✅
+[2026-04-05T18:54:56.096+0000] {python.py:201} INFO - Done. Returned value was: None
+[2026-04-05T18:54:56.096+0000] {branch.py:35} INFO - Branch into None
+[2026-04-05T18:54:56.097+0000] {skipmixin.py:178} INFO - Following branch None
+[2026-04-05T18:54:56.104+0000] {skipmixin.py:244} INFO - Skipping tasks [('transform_and_load', -1)]
+[2026-04-05T18:54:56.127+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=customer_transactions_etl, task_id=check_delta_dq, execution_date=20260405T185428, start_date=20260405T185455, end_date=20260405T185456
+[2026-04-05T18:54:56.160+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-04-05T18:54:56.179+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

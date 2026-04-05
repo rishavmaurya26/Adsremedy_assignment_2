@@ -16,23 +16,24 @@ from faker import Faker
 from pyspark.sql import SparkSession
 from typing import List, Dict
 from pyspark.sql.types import StructType, StructField, StringType, FloatType, TimestampType
-from delta import configure_spark_with_delta_pip
 
 # ── Spark session with Delta Lake support ───────────────────────────────────
-builder = (
+spark = (
     SparkSession.builder
     .appName("DataGeneration")
-    .master("local[*]")          # change to "local[*]" for local run
+    .master("local[*]")
     .config("spark.sql.extensions", "io.delta.sql.DeltaSparkSessionExtension")
-    .config("spark.sql.catalog.spark_catalog", "org.apache.spark.sql.delta.catalog.DeltaCatalog")
+    .config(
+        "spark.sql.catalog.spark_catalog",
+        "org.apache.spark.sql.delta.catalog.DeltaCatalog",
+    )
     .config(
         "spark.jars.packages",
-        "io.delta:delta-spark_2.12:3.1.0,"
-        "com.datastax.spark:spark-cassandra-connector_2.12:3.5.0",
+        "io.delta:delta-spark_2.12:3.1.0",
     )
+    .config("spark.jars.ivy", "/root/.ivy2")   # ← use cached jars
+    .getOrCreate()
 )
-
-spark = configure_spark_with_delta_pip(builder).getOrCreate()
 spark.sparkContext.setLogLevel("WARN")
 
 DELTA_PATH = "/opt/data/delta-lake/customer_transactions"

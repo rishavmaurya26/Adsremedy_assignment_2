@@ -28,10 +28,9 @@ DEFAULT_ARGS = {
     "depends_on_past": False,
     "email_on_failure": False,       # set to True + add email for alerts
     "email_on_retry": False,
-    "retries": 2,
-    "retry_delay": timedelta(minutes=5),
-    "retry_exponential_backoff": True,
-    "max_retry_delay": timedelta(minutes=30),
+    "retries": 1,                           # ← only 1 retry
+    "retry_delay": timedelta(seconds=30),   # ← wait only 30 seconds
+    "retry_exponential_backoff": True
 }
 
 # ── Config ───────────────────────────────────────────────────────────────────
@@ -58,44 +57,57 @@ docker exec spark_master \
 # Python callables
 # ─────────────────────────────────────────────────────────────────────────────
 
-def check_delta_table(**context) -> str:
-    """
-    Data quality gate: verify the Delta table exists and has enough rows.
-    Returns the id of the next task to run (branch operator).
-    """
-    """
-    Data quality gate: verify the Delta table exists by checking
-    if the _delta_log folder is present — no PySpark needed.
-    """
+def check_delta_table(**context):
     import os
 
     delta_log_path = os.path.join(DELTA_PATH, "_delta_log")
     log.info(f"Checking Delta table at {DELTA_PATH} ...")
 
-    # Check if delta table exists
-    if not os.path.exists(DELTA_PATH):
-        log.warning(f"Delta path does not exist: {DELTA_PATH}")
-        return "dq_fail_alert"
+    if not os.path.exists(DELTA_PATH) or not os.path.exists(delta_log_path):
+        raise Exception(f"Delta table not found at {DELTA_PATH}")
 
-    if not os.path.exists(delta_log_path):
-        log.warning(f"No _delta_log found — not a valid Delta table")
-        return "dq_fail_alert"
-
-    # Count parquet files as a proxy for row count
-    parquet_files = [
-        f for f in os.listdir(DELTA_PATH)
-        if f.endswith(".parquet")
-    ]
-
-    log.info(f"Found {len(parquet_files)} parquet files in Delta table")
+    parquet_files = [f for f in os.listdir(DELTA_PATH) if f.endswith(".parquet")]
+    log.info(f"Found {len(parquet_files)} parquet files")
 
     if len(parquet_files) == 0:
-        log.warning("No parquet files found — table appears empty")
-        return "dq_fail_alert"
+        raise Exception("Delta table is empty — generation may have failed!")
 
     context["ti"].xcom_push(key="parquet_file_count", value=len(parquet_files))
     log.info("Delta table check passed ✅")
-    return "transform_and_load"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Helper — run docker exec command
+# ─────────────────────────────────────────────────────────────────────────────
+def run_docker_exec(cmd: list[str], task_name: str) -> str:
+    """Run a command inside a container and return stdout. Raises on failure."""
+    result = subprocess.run(cmd, capture_output=True, text=True)
+    log.info(result.stdout)
+    if result.returncode != 0:
+        log.error(result.stderr)
+        raise Exception(f"{task_name} failed with return code {result.returncode}\n{result.stderr}")
+    return result.stdout
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Task 2 — Generate fake data and write to Delta Lake
+# ─────────────────────────────────────────────────────────────────────────────
+def run_data_generation(**context):
+    """Run generate_data.py inside spark_master via docker exec."""
+    log.info("Starting data generation...")
+ 
+    cmd = [
+        "docker", "exec", "spark_master",
+        "/opt/spark/bin/spark-submit",
+        "--master", "local[*]",
+        "--packages", "io.delta:delta-spark_2.12:3.1.0",
+        "--conf", "spark.sql.extensions=io.delta.sql.DeltaSparkSessionExtension",
+        "--conf", "spark.sql.catalog.spark_catalog=org.apache.spark.sql.delta.catalog.DeltaCatalog",
+        "/opt/scripts/generate_data.py"
+    ]
+ 
+    output = run_docker_exec(cmd, "Data Generation")
+    log.info("Data generation completed ✅")
+    log.info(output)
+
 
 def run_spark_etl(**context):
     """Run spark-submit inside the spark_master container via subprocess."""
@@ -122,16 +134,6 @@ def run_spark_etl(**context):
         raise Exception(f"Spark job failed with return code {result.returncode}\n{result.stderr}")
 
     log.info("Spark ETL completed successfully ✅")
-
-def dq_fail_alert(**context):
-    """Called when DQ check fails."""
-    raw_count = context["ti"].xcom_pull(key="raw_row_count")
-    msg = (
-        f"Pipeline aborted: Delta table row count ({raw_count}) "
-        f"is below minimum threshold ({MIN_ROW_COUNT})."
-    )
-    log.error(msg)
-    raise ValueError(msg)
 
 
 def verify_scylladb_load(**context):
@@ -178,7 +180,7 @@ with DAG(
 
 **Flow:**
 ```
-check_delta_dq → [dq_fail_alert | transform_and_load] → verify_scylladb → pipeline_success
+generate_data >> check_delta_dq >> transform_and_load >> verify_scylladb
 ```
 
 **Tasks:**
@@ -193,24 +195,24 @@ check_delta_dq → [dq_fail_alert | transform_and_load] → verify_scylladb → 
     start = EmptyOperator(task_id="start")
 
     # ── Task 1: DQ check on Delta table (branch) ───────────────────────────
-    check_delta_dq = BranchPythonOperator(
+    check_delta_dq = PythonOperator(
         task_id="check_delta_dq",
         python_callable=check_delta_table,
     )
 
-    # ── Branch: DQ failure path ────────────────────────────────────────────
-    dq_fail = PythonOperator(
-        task_id="dq_fail_alert",
-        python_callable=dq_fail_alert,
+    # Task 2 — Data generation
+    generate_data = PythonOperator(
+        task_id="generate_data",
+        python_callable=run_data_generation,
     )
 
-    # ── Task 2: Spark ETL (extract + transform + load) ─────────────────────
+    # ── Task 3: Spark ETL (extract + transform + load) ─────────────────────
     transform_and_load = PythonOperator(
         task_id="transform_and_load",
         python_callable=run_spark_etl
     )
 
-    # ── Task 3: Verify ScyllaDB ────────────────────────────────────────────
+    # ── Task 4: Verify ScyllaDB ────────────────────────────────────────────
     verify_scylladb = PythonOperator(
         task_id="verify_scylladb",
         python_callable=verify_scylladb_load,
@@ -223,7 +225,4 @@ check_delta_dq → [dq_fail_alert | transform_and_load] → verify_scylladb → 
     )
 
     # ── Task dependencies ──────────────────────────────────────────────────
-    start >> check_delta_dq
-    check_delta_dq >> [dq_fail, transform_and_load]
-    transform_and_load >> verify_scylladb >> pipeline_success
-    dq_fail >> pipeline_success
+start >> generate_data >> check_delta_dq >> transform_and_load >> verify_scylladb >> pipeline_success
