@@ -1,0 +1,115 @@
+[2026-04-07T05:50:03.448+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_transactions_etl.generate_data scheduled__2026-04-06T02:00:00+00:00 [queued]>
+[2026-04-07T05:50:03.454+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_transactions_etl.generate_data scheduled__2026-04-06T02:00:00+00:00 [queued]>
+[2026-04-07T05:50:03.454+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 2
+[2026-04-07T05:50:03.463+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): generate_data> on 2026-04-06 02:00:00+00:00
+[2026-04-07T05:50:03.468+0000] {standard_task_runner.py:60} INFO - Started process 188 to run task
+[2026-04-07T05:50:03.470+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'customer_transactions_etl', 'generate_data', 'scheduled__2026-04-06T02:00:00+00:00', '--job-id', '39', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpmrflzmtm']
+[2026-04-07T05:50:03.471+0000] {standard_task_runner.py:88} INFO - Job 39: Subtask generate_data
+[2026-04-07T05:50:03.511+0000] {task_command.py:423} INFO - Running <TaskInstance: customer_transactions_etl.generate_data scheduled__2026-04-06T02:00:00+00:00 [running]> on host dd253c0ea888
+[2026-04-07T05:50:03.603+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-engineering' AIRFLOW_CTX_DAG_ID='customer_transactions_etl' AIRFLOW_CTX_TASK_ID='generate_data' AIRFLOW_CTX_EXECUTION_DATE='2026-04-06T02:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-04-06T02:00:00+00:00'
+[2026-04-07T05:50:03.604+0000] {pipeline_dag.py:95} INFO - Starting data generation...
+[2026-04-07T05:50:05.940+0000] {pipeline_dag.py:84} INFO - :: loading settings :: url = jar:file:/opt/spark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Traceback (most recent call last):
+  File "/opt/scripts/generate_data.py", line 15, in <module>
+    from faker import Faker
+ModuleNotFoundError: No module named 'faker'
+
+[2026-04-07T05:50:05.940+0000] {pipeline_dag.py:86} ERROR - Ivy Default Cache set to: /root/.ivy2/cache
+The jars for the packages stored in: /root/.ivy2/jars
+io.delta#delta-spark_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-487e2f5c-27b5-4a38-b3ea-5b7441772e44;1.0
+	confs: [default]
+	found io.delta#delta-spark_2.12;3.1.0 in central
+	found io.delta#delta-storage;3.1.0 in central
+	found org.antlr#antlr4-runtime;4.9.3 in central
+:: resolution report :: resolve 134ms :: artifacts dl 6ms
+	:: modules in use:
+	io.delta#delta-spark_2.12;3.1.0 from central in [default]
+	io.delta#delta-storage;3.1.0 from central in [default]
+	org.antlr#antlr4-runtime;4.9.3 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   3   |   0   |   0   |   0   ||   3   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-487e2f5c-27b5-4a38-b3ea-5b7441772e44
+	confs: [default]
+	0 artifacts copied, 3 already retrieved (0kB/5ms)
+26/04/07 05:50:05 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/04/07 05:50:05 INFO ShutdownHookManager: Shutdown hook called
+26/04/07 05:50:05 INFO ShutdownHookManager: Deleting directory /tmp/spark-e6a2840c-fc05-41cb-99a4-2288e3ce6d70
+
+[2026-04-07T05:50:05.940+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/pipeline_dag.py", line 107, in run_data_generation
+    output = run_docker_exec(cmd, "Data Generation")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/pipeline_dag.py", line 87, in run_docker_exec
+    raise Exception(f"{task_name} failed with return code {result.returncode}\n{result.stderr}")
+Exception: Data Generation failed with return code 1
+Ivy Default Cache set to: /root/.ivy2/cache
+The jars for the packages stored in: /root/.ivy2/jars
+io.delta#delta-spark_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-487e2f5c-27b5-4a38-b3ea-5b7441772e44;1.0
+	confs: [default]
+	found io.delta#delta-spark_2.12;3.1.0 in central
+	found io.delta#delta-storage;3.1.0 in central
+	found org.antlr#antlr4-runtime;4.9.3 in central
+:: resolution report :: resolve 134ms :: artifacts dl 6ms
+	:: modules in use:
+	io.delta#delta-spark_2.12;3.1.0 from central in [default]
+	io.delta#delta-storage;3.1.0 from central in [default]
+	org.antlr#antlr4-runtime;4.9.3 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   3   |   0   |   0   |   0   ||   3   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-487e2f5c-27b5-4a38-b3ea-5b7441772e44
+	confs: [default]
+	0 artifacts copied, 3 already retrieved (0kB/5ms)
+26/04/07 05:50:05 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/04/07 05:50:05 INFO ShutdownHookManager: Shutdown hook called
+26/04/07 05:50:05 INFO ShutdownHookManager: Deleting directory /tmp/spark-e6a2840c-fc05-41cb-99a4-2288e3ce6d70
+
+[2026-04-07T05:50:05.949+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=customer_transactions_etl, task_id=generate_data, execution_date=20260406T020000, start_date=20260407T055003, end_date=20260407T055005
+[2026-04-07T05:50:05.959+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 39 for task generate_data (Data Generation failed with return code 1
+Ivy Default Cache set to: /root/.ivy2/cache
+The jars for the packages stored in: /root/.ivy2/jars
+io.delta#delta-spark_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-487e2f5c-27b5-4a38-b3ea-5b7441772e44;1.0
+	confs: [default]
+	found io.delta#delta-spark_2.12;3.1.0 in central
+	found io.delta#delta-storage;3.1.0 in central
+	found org.antlr#antlr4-runtime;4.9.3 in central
+:: resolution report :: resolve 134ms :: artifacts dl 6ms
+	:: modules in use:
+	io.delta#delta-spark_2.12;3.1.0 from central in [default]
+	io.delta#delta-storage;3.1.0 from central in [default]
+	org.antlr#antlr4-runtime;4.9.3 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   3   |   0   |   0   |   0   ||   3   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-487e2f5c-27b5-4a38-b3ea-5b7441772e44
+	confs: [default]
+	0 artifacts copied, 3 already retrieved (0kB/5ms)
+26/04/07 05:50:05 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/04/07 05:50:05 INFO ShutdownHookManager: Shutdown hook called
+26/04/07 05:50:05 INFO ShutdownHookManager: Deleting directory /tmp/spark-e6a2840c-fc05-41cb-99a4-2288e3ce6d70
+; 188)
+[2026-04-07T05:50:05.976+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-04-07T05:50:05.995+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

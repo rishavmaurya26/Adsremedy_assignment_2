@@ -1,0 +1,660 @@
+[2026-04-07T05:48:51.181+0000] {processor.py:161} INFO - Started process (PID=164) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:48:51.182+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T05:48:51.183+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:48:51.183+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:48:51.241+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:48:51.612+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:48:51.612+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T05:48:51.635+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:48:51.635+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-06 02:00:00+00:00, run_after=2026-04-07 02:00:00+00:00
+[2026-04-07T05:48:51.709+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.531 seconds
+[2026-04-07T05:49:21.833+0000] {processor.py:161} INFO - Started process (PID=177) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:49:21.834+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T05:49:21.834+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:49:21.834+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:49:21.847+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:49:21.873+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:49:21.872+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T05:49:21.902+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.071 seconds
+[2026-04-07T05:49:51.938+0000] {processor.py:161} INFO - Started process (PID=182) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:49:51.939+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T05:49:51.939+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:49:51.939+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:49:51.952+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:49:51.972+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:49:51.972+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T05:49:52.001+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.065 seconds
+[2026-04-07T05:50:22.095+0000] {processor.py:161} INFO - Started process (PID=204) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:50:22.095+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T05:50:22.096+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:50:22.096+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:50:22.110+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:50:22.133+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:50:22.133+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T05:50:22.169+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.077 seconds
+[2026-04-07T05:50:52.206+0000] {processor.py:161} INFO - Started process (PID=209) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:50:52.206+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T05:50:52.207+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:50:52.207+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:50:52.222+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:50:52.244+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:50:52.243+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T05:50:52.270+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.068 seconds
+[2026-04-07T05:51:22.357+0000] {processor.py:161} INFO - Started process (PID=223) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:51:22.358+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T05:51:22.358+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:51:22.358+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:51:22.371+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:51:22.392+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:51:22.392+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T05:51:22.408+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:51:22.408+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T05:51:22.421+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.066 seconds
+[2026-04-07T05:51:52.467+0000] {processor.py:161} INFO - Started process (PID=228) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:51:52.467+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T05:51:52.468+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:51:52.468+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:51:52.481+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:51:52.502+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:51:52.502+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T05:51:52.519+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:51:52.519+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T05:51:52.533+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.068 seconds
+[2026-04-07T05:52:22.611+0000] {processor.py:161} INFO - Started process (PID=233) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:52:22.612+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T05:52:22.612+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:52:22.612+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:52:22.625+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:52:22.645+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:52:22.645+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T05:52:22.661+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:52:22.661+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T05:52:22.674+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.065 seconds
+[2026-04-07T05:52:52.722+0000] {processor.py:161} INFO - Started process (PID=238) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:52:52.722+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T05:52:52.723+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:52:52.722+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:52:52.735+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:52:52.757+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:52:52.756+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T05:52:52.773+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:52:52.773+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T05:52:52.785+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.065 seconds
+[2026-04-07T05:53:22.859+0000] {processor.py:161} INFO - Started process (PID=243) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:53:22.859+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T05:53:22.860+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:53:22.860+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:53:22.873+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:53:22.893+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:53:22.893+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T05:53:22.909+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:53:22.909+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T05:53:22.921+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.065 seconds
+[2026-04-07T05:53:52.977+0000] {processor.py:161} INFO - Started process (PID=248) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:53:52.977+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T05:53:52.978+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:53:52.977+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:53:52.990+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:53:53.012+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:53:53.011+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T05:53:53.028+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:53:53.028+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T05:53:53.041+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.066 seconds
+[2026-04-07T05:54:23.110+0000] {processor.py:161} INFO - Started process (PID=253) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:54:23.110+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T05:54:23.111+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:54:23.110+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:54:23.123+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:54:23.145+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:54:23.144+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T05:54:23.161+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:54:23.161+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T05:54:23.174+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.067 seconds
+[2026-04-07T05:54:25.136+0000] {processor.py:161} INFO - Started process (PID=258) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:54:25.136+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T05:54:25.137+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:54:25.137+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:54:25.152+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:54:25.174+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:54:25.174+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T05:54:25.191+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:54:25.191+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T05:54:25.213+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.080 seconds
+[2026-04-07T05:54:27.240+0000] {processor.py:161} INFO - Started process (PID=263) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:54:27.240+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T05:54:27.241+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:54:27.241+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:54:27.256+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:54:27.279+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:54:27.279+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T05:54:27.296+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:54:27.295+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T05:54:27.312+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.075 seconds
+[2026-04-07T05:54:29.252+0000] {processor.py:161} INFO - Started process (PID=268) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:54:29.253+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T05:54:29.253+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:54:29.253+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:54:29.258+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:54:29.256+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/pipeline_dag.py", line 95
+    Install required packages inside spark container automatically
+IndentationError: unexpected indent
+[2026-04-07T05:54:29.258+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:54:29.279+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.029 seconds
+[2026-04-07T05:54:37.286+0000] {processor.py:161} INFO - Started process (PID=273) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:54:37.286+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T05:54:37.287+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:54:37.287+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:54:37.301+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:54:37.323+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:54:37.322+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T05:54:37.339+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:54:37.339+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T05:54:37.354+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.070 seconds
+[2026-04-07T05:54:46.353+0000] {processor.py:161} INFO - Started process (PID=278) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:54:46.353+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T05:54:46.354+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:54:46.354+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:54:46.357+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:54:46.357+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/pipeline_dag.py", line 95
+    Install required packages inside spark container automatically
+IndentationError: unexpected indent
+[2026-04-07T05:54:46.358+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:54:46.375+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.024 seconds
+[2026-04-07T05:54:48.366+0000] {processor.py:161} INFO - Started process (PID=283) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:54:48.367+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T05:54:48.367+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:54:48.367+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:54:48.381+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:54:48.403+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:54:48.403+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T05:54:48.419+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:54:48.419+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T05:54:48.438+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.075 seconds
+[2026-04-07T05:54:51.413+0000] {processor.py:161} INFO - Started process (PID=288) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:54:51.414+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T05:54:51.414+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:54:51.414+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:54:51.429+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:54:51.450+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:54:51.450+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T05:54:51.466+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:54:51.466+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T05:54:51.480+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.070 seconds
+[2026-04-07T05:54:56.487+0000] {processor.py:161} INFO - Started process (PID=293) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:54:56.487+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T05:54:56.488+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:54:56.488+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:54:56.502+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:54:56.524+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:54:56.524+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T05:54:56.540+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:54:56.540+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T05:54:56.555+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.071 seconds
+[2026-04-07T05:54:58.523+0000] {processor.py:161} INFO - Started process (PID=298) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:54:58.523+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T05:54:58.524+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:54:58.523+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:54:58.538+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:54:58.560+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:54:58.560+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T05:54:58.576+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:54:58.576+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T05:54:58.592+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.072 seconds
+[2026-04-07T05:54:59.586+0000] {processor.py:161} INFO - Started process (PID=303) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:54:59.587+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T05:54:59.588+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:54:59.587+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:54:59.602+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:54:59.624+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:54:59.623+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T05:54:59.640+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:54:59.640+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T05:54:59.655+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.071 seconds
+[2026-04-07T05:55:29.724+0000] {processor.py:161} INFO - Started process (PID=317) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:55:29.724+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T05:55:29.725+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:55:29.725+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:55:29.744+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:55:29.766+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:55:29.766+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T05:55:30.017+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.297 seconds
+[2026-04-07T05:56:00.162+0000] {processor.py:161} INFO - Started process (PID=338) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:56:00.163+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T05:56:00.163+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:56:00.163+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:56:00.177+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:56:00.199+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:56:00.199+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T05:56:00.235+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.075 seconds
+[2026-04-07T05:56:30.283+0000] {processor.py:161} INFO - Started process (PID=343) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:56:30.284+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T05:56:30.285+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:56:30.285+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:56:30.303+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:56:30.335+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:56:30.334+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T05:56:30.376+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.097 seconds
+[2026-04-07T05:57:00.468+0000] {processor.py:161} INFO - Started process (PID=357) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:57:00.469+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T05:57:00.470+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:57:00.469+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:57:00.483+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:57:00.503+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:57:00.503+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T05:57:00.531+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.065 seconds
+[2026-04-07T05:57:30.574+0000] {processor.py:161} INFO - Started process (PID=362) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:57:30.575+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T05:57:30.576+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:57:30.576+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:57:30.589+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:57:30.613+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:57:30.612+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T05:57:30.641+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.069 seconds
+[2026-04-07T05:58:00.720+0000] {processor.py:161} INFO - Started process (PID=376) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:58:00.721+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T05:58:00.722+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:58:00.722+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:58:00.736+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:58:00.759+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:58:00.759+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T05:58:00.776+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:58:00.776+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T05:58:00.788+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.070 seconds
+[2026-04-07T05:58:30.831+0000] {processor.py:161} INFO - Started process (PID=381) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:58:30.831+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T05:58:30.832+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:58:30.832+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:58:30.845+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:58:30.866+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:58:30.866+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T05:58:30.883+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:58:30.883+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T05:58:30.895+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.067 seconds
+[2026-04-07T05:59:00.978+0000] {processor.py:161} INFO - Started process (PID=386) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:59:00.978+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T05:59:00.979+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:59:00.978+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:59:00.991+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:59:01.012+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:59:01.012+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T05:59:01.028+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:59:01.028+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T05:59:01.041+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.065 seconds
+[2026-04-07T05:59:31.088+0000] {processor.py:161} INFO - Started process (PID=391) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:59:31.088+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T05:59:31.089+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:59:31.089+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:59:31.102+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:59:31.123+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:59:31.123+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T05:59:31.140+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:59:31.140+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T05:59:31.152+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.067 seconds
+[2026-04-07T05:59:59.228+0000] {processor.py:161} INFO - Started process (PID=396) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:59:59.229+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T05:59:59.229+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:59:59.229+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:59:59.233+0000] {logging_mixin.py:188} INFO - [2026-04-07T05:59:59.232+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/pipeline_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/pipeline_dag.py", line 157
+    "cqlsh", "SCYLLA_HOST = "scylladb"", "9042",
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+[2026-04-07T05:59:59.233+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T05:59:59.249+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.023 seconds
+[2026-04-07T06:00:07.265+0000] {processor.py:161} INFO - Started process (PID=401) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:00:07.266+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:00:07.266+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:00:07.266+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:00:07.280+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:00:07.301+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:00:07.301+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:00:07.318+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:00:07.318+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:00:07.342+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.080 seconds
+[2026-04-07T06:00:20.332+0000] {processor.py:161} INFO - Started process (PID=406) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:00:20.333+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:00:20.334+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:00:20.333+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:00:20.348+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:00:20.368+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:00:20.368+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:00:20.385+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:00:20.385+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:00:20.399+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.069 seconds
+[2026-04-07T06:00:37.451+0000] {processor.py:161} INFO - Started process (PID=411) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:00:37.451+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:00:37.452+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:00:37.452+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:00:37.467+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:00:37.487+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:00:37.487+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:00:37.505+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:00:37.505+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:00:37.518+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.070 seconds
+[2026-04-07T06:00:38.464+0000] {processor.py:161} INFO - Started process (PID=416) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:00:38.465+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:00:38.466+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:00:38.465+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:00:38.480+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:00:38.503+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:00:38.503+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:00:38.521+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:00:38.521+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:00:38.536+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.074 seconds
+[2026-04-07T06:01:08.637+0000] {processor.py:161} INFO - Started process (PID=429) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:01:08.637+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:01:08.638+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:01:08.638+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:01:08.651+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:01:08.672+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:01:08.672+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:01:08.689+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:01:08.689+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:01:08.702+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.067 seconds
+[2026-04-07T06:01:38.747+0000] {processor.py:161} INFO - Started process (PID=434) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:01:38.748+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:01:38.749+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:01:38.749+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:01:38.766+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:01:38.795+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:01:38.795+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:01:38.815+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:01:38.815+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:01:38.833+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.089 seconds
+[2026-04-07T06:02:08.892+0000] {processor.py:161} INFO - Started process (PID=439) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:02:08.892+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:02:08.893+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:02:08.893+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:02:08.907+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:02:08.928+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:02:08.928+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:02:08.945+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:02:08.944+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:02:08.957+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.068 seconds
+[2026-04-07T06:02:39.016+0000] {processor.py:161} INFO - Started process (PID=444) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:02:39.017+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:02:39.018+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:02:39.017+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:02:39.033+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:02:39.061+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:02:39.060+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:02:39.078+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:02:39.077+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:02:39.090+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.077 seconds
+[2026-04-07T06:27:38.901+0000] {processor.py:161} INFO - Started process (PID=164) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:27:38.902+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:27:38.902+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:27:38.902+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:27:38.949+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:27:39.249+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:27:39.248+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:27:39.272+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:27:39.272+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:27:39.297+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.399 seconds
+[2026-04-07T06:28:09.414+0000] {processor.py:161} INFO - Started process (PID=169) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:28:09.415+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:28:09.416+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:28:09.416+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:28:09.430+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:28:09.454+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:28:09.454+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:28:09.471+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:28:09.471+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:28:09.483+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.071 seconds
+[2026-04-07T06:28:39.522+0000] {processor.py:161} INFO - Started process (PID=174) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:28:39.522+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:28:39.523+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:28:39.522+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:28:39.535+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:28:39.556+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:28:39.556+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:28:39.574+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:28:39.574+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:28:39.586+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.067 seconds
+[2026-04-07T06:29:09.674+0000] {processor.py:161} INFO - Started process (PID=179) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:29:09.674+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:29:09.675+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:29:09.675+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:29:09.687+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:29:09.709+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:29:09.709+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:29:09.731+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:29:09.731+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:29:09.747+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.076 seconds
+[2026-04-07T06:29:39.781+0000] {processor.py:161} INFO - Started process (PID=184) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:29:39.781+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:29:39.782+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:29:39.782+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:29:39.794+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:29:39.816+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:29:39.816+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:29:39.833+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:29:39.833+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:29:39.845+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.067 seconds
+[2026-04-07T06:30:09.934+0000] {processor.py:161} INFO - Started process (PID=189) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:30:09.935+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:30:09.936+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:30:09.935+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:30:09.948+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:30:09.969+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:30:09.969+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:30:09.985+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:30:09.985+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:30:09.997+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.065 seconds
+[2026-04-07T06:30:40.043+0000] {processor.py:161} INFO - Started process (PID=194) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:30:40.043+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:30:40.044+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:30:40.044+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:30:40.057+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:30:40.078+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:30:40.078+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:30:40.095+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:30:40.095+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:30:40.108+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.068 seconds
+[2026-04-07T06:31:10.188+0000] {processor.py:161} INFO - Started process (PID=199) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:31:10.188+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:31:10.189+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:31:10.189+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:31:10.201+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:31:10.222+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:31:10.221+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:31:10.239+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:31:10.239+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:31:10.251+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.066 seconds
+[2026-04-07T06:31:40.296+0000] {processor.py:161} INFO - Started process (PID=204) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:31:40.297+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:31:40.298+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:31:40.297+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:31:40.310+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:31:40.332+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:31:40.332+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:31:40.348+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:31:40.348+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:31:40.360+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.066 seconds
+[2026-04-07T06:32:10.438+0000] {processor.py:161} INFO - Started process (PID=209) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:32:10.439+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:32:10.440+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:32:10.439+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:32:10.452+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:32:10.472+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:32:10.472+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:32:10.489+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:32:10.489+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:32:10.501+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.065 seconds
+[2026-04-07T06:32:40.552+0000] {processor.py:161} INFO - Started process (PID=214) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:32:40.553+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:32:40.553+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:32:40.553+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:32:40.566+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:32:40.587+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:32:40.587+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:32:40.603+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:32:40.603+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:32:40.616+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.066 seconds
+[2026-04-07T06:33:10.685+0000] {processor.py:161} INFO - Started process (PID=219) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:33:10.685+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:33:10.686+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:33:10.686+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:33:10.699+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:33:10.719+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:33:10.719+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:33:10.736+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:33:10.736+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:33:10.748+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.066 seconds
+[2026-04-07T06:33:40.794+0000] {processor.py:161} INFO - Started process (PID=224) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:33:40.794+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:33:40.795+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:33:40.795+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:33:40.808+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:33:40.831+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:33:40.831+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:33:40.852+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:33:40.852+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:33:40.867+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.076 seconds
+[2026-04-07T06:34:10.937+0000] {processor.py:161} INFO - Started process (PID=229) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:34:10.937+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:34:10.938+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:34:10.938+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:34:10.952+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:34:10.973+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:34:10.973+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:34:10.992+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:34:10.992+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:34:11.005+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.071 seconds
+[2026-04-07T06:34:41.067+0000] {processor.py:161} INFO - Started process (PID=250) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:34:41.068+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:34:41.068+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:34:41.068+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:34:41.087+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:34:41.120+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:34:41.119+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:34:41.162+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.098 seconds
+[2026-04-07T06:35:11.247+0000] {processor.py:161} INFO - Started process (PID=255) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:35:11.248+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:35:11.250+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:35:11.249+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:35:11.272+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:35:11.326+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:35:11.326+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:35:11.375+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.135 seconds
+[2026-04-07T06:35:41.502+0000] {processor.py:161} INFO - Started process (PID=270) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:35:41.507+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:35:41.508+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:35:41.508+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:35:41.528+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:35:41.561+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:35:41.561+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:35:41.611+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.113 seconds
+[2026-04-07T06:36:11.734+0000] {processor.py:161} INFO - Started process (PID=283) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:36:11.735+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:36:11.736+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:36:11.735+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:36:11.750+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:36:11.778+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:36:11.778+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:36:11.795+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:36:11.795+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:36:11.809+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.077 seconds
+[2026-04-07T06:36:41.832+0000] {processor.py:161} INFO - Started process (PID=288) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:36:41.832+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:36:41.833+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:36:41.833+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:36:41.845+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:36:41.866+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:36:41.866+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:36:41.883+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:36:41.882+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:36:41.895+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.066 seconds
+[2026-04-07T06:37:11.988+0000] {processor.py:161} INFO - Started process (PID=293) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:37:11.989+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:37:11.989+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:37:11.989+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:37:12.002+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:37:12.023+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:37:12.023+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:37:12.041+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:37:12.040+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:37:12.053+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.067 seconds
+[2026-04-07T06:37:42.104+0000] {processor.py:161} INFO - Started process (PID=298) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:37:42.105+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:37:42.106+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:37:42.106+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:37:42.119+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:37:42.142+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:37:42.142+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:37:42.159+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:37:42.159+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:37:42.174+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.072 seconds
+[2026-04-07T06:38:12.242+0000] {processor.py:161} INFO - Started process (PID=303) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:38:12.242+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:38:12.243+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:38:12.243+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:38:12.258+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:38:12.278+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:38:12.278+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:38:12.295+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:38:12.294+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:38:12.307+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.068 seconds
+[2026-04-07T06:38:42.361+0000] {processor.py:161} INFO - Started process (PID=308) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:38:42.362+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:38:42.362+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:38:42.362+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:38:42.375+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:38:42.397+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:38:42.397+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:38:42.413+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:38:42.413+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:38:42.426+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.068 seconds
+[2026-04-07T06:39:12.499+0000] {processor.py:161} INFO - Started process (PID=313) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:39:12.499+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:39:12.500+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:39:12.500+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:39:12.513+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:39:12.533+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:39:12.533+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:39:12.550+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:39:12.550+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:39:12.563+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.066 seconds
+[2026-04-07T06:39:42.619+0000] {processor.py:161} INFO - Started process (PID=318) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:39:42.620+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:39:42.621+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:39:42.620+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:39:42.633+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:39:42.656+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:39:42.656+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:39:42.673+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:39:42.672+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:39:42.686+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.069 seconds
+[2026-04-07T06:40:12.754+0000] {processor.py:161} INFO - Started process (PID=323) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:40:12.755+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:40:12.756+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:40:12.755+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:40:12.774+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:40:12.805+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:40:12.805+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:40:12.830+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:40:12.830+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:40:12.844+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.095 seconds
+[2026-04-07T06:40:42.881+0000] {processor.py:161} INFO - Started process (PID=328) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:40:42.882+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:40:42.883+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:40:42.882+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:40:42.896+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:40:42.918+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:40:42.918+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:40:42.935+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:40:42.935+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:40:42.948+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.069 seconds
+[2026-04-07T06:41:13.025+0000] {processor.py:161} INFO - Started process (PID=333) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:41:13.026+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:41:13.026+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:41:13.026+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:41:13.039+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:41:13.060+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:41:13.059+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:41:13.077+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:41:13.076+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:41:13.091+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.068 seconds
+[2026-04-07T06:41:43.137+0000] {processor.py:161} INFO - Started process (PID=338) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:41:43.138+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:41:43.139+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:41:43.139+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:41:43.153+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:41:43.175+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:41:43.175+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:41:43.201+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:41:43.200+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:41:43.216+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.081 seconds
+[2026-04-07T06:42:13.281+0000] {processor.py:161} INFO - Started process (PID=343) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:42:13.281+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:42:13.282+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:42:13.281+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:42:13.295+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:42:13.316+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:42:13.316+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:42:13.335+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:42:13.335+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:42:13.348+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.070 seconds
+[2026-04-07T06:42:43.412+0000] {processor.py:161} INFO - Started process (PID=348) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:42:43.412+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:42:43.413+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:42:43.413+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:42:43.426+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:42:43.450+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:42:43.450+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:42:43.467+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:42:43.467+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:42:43.480+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.070 seconds
+[2026-04-07T06:43:13.542+0000] {processor.py:161} INFO - Started process (PID=353) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:43:13.543+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:43:13.543+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:43:13.543+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:43:13.556+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:43:13.577+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:43:13.577+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:43:13.594+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:43:13.594+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:43:13.606+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.067 seconds
+[2026-04-07T06:43:43.676+0000] {processor.py:161} INFO - Started process (PID=358) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:43:43.676+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:43:43.677+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:43:43.677+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:43:43.690+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:43:43.711+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:43:43.711+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:43:43.728+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:43:43.727+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:43:43.744+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.072 seconds
+[2026-04-07T06:44:13.793+0000] {processor.py:161} INFO - Started process (PID=363) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:44:13.793+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:44:13.794+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:44:13.794+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:44:13.807+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:44:13.829+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:44:13.828+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:44:13.845+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:44:13.845+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:44:13.858+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.068 seconds
+[2026-04-07T06:44:43.935+0000] {processor.py:161} INFO - Started process (PID=368) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:44:43.936+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:44:43.937+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:44:43.936+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:44:43.952+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:44:43.972+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:44:43.972+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:44:43.989+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:44:43.988+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:44:44.001+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.069 seconds
+[2026-04-07T06:45:14.049+0000] {processor.py:161} INFO - Started process (PID=373) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:45:14.049+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:45:14.050+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:45:14.050+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:45:14.063+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:45:14.084+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:45:14.084+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:45:14.101+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:45:14.101+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:45:14.114+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.068 seconds
+[2026-04-07T06:45:44.191+0000] {processor.py:161} INFO - Started process (PID=378) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:45:44.192+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:45:44.192+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:45:44.192+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:45:44.207+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:45:44.229+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:45:44.229+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:45:44.245+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:45:44.245+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:45:44.258+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.069 seconds
+[2026-04-07T06:46:14.302+0000] {processor.py:161} INFO - Started process (PID=383) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:46:14.302+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:46:14.303+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:46:14.303+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:46:14.316+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:46:14.338+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:46:14.338+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:46:14.356+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:46:14.356+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:46:14.369+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.069 seconds
+[2026-04-07T06:46:44.450+0000] {processor.py:161} INFO - Started process (PID=388) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:46:44.451+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:46:44.451+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:46:44.451+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:46:44.464+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:46:44.485+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:46:44.485+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:46:44.502+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:46:44.502+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:46:44.515+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.068 seconds
+[2026-04-07T06:47:14.561+0000] {processor.py:161} INFO - Started process (PID=393) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:47:14.562+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:47:14.562+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:47:14.562+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:47:14.575+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:47:14.597+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:47:14.597+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:47:14.614+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:47:14.614+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:47:14.626+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.067 seconds
+[2026-04-07T06:47:44.715+0000] {processor.py:161} INFO - Started process (PID=398) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:47:44.716+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:47:44.716+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:47:44.716+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:47:44.729+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:47:44.754+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:47:44.753+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:47:44.770+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:47:44.770+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:47:44.786+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.073 seconds
+[2026-04-07T06:48:14.819+0000] {processor.py:161} INFO - Started process (PID=403) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:48:14.820+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:48:14.820+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:48:14.820+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:48:14.833+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:48:14.857+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:48:14.857+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:48:14.875+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:48:14.875+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:48:14.888+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.071 seconds
+[2026-04-07T06:48:44.969+0000] {processor.py:161} INFO - Started process (PID=408) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:48:44.970+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:48:44.970+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:48:44.970+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:48:44.983+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:48:45.006+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:48:45.006+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:48:45.028+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:48:45.028+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:48:45.047+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.080 seconds
+[2026-04-07T06:49:15.077+0000] {processor.py:161} INFO - Started process (PID=413) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:49:15.078+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:49:15.078+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:49:15.078+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:49:15.091+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:49:15.113+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:49:15.112+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:49:15.129+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:49:15.129+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:49:15.142+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.068 seconds
+[2026-04-07T06:49:45.242+0000] {processor.py:161} INFO - Started process (PID=418) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:49:45.243+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:49:45.243+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:49:45.243+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:49:45.256+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:49:45.278+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:49:45.278+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:49:45.295+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:49:45.294+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:49:45.307+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.067 seconds
+[2026-04-07T06:50:15.356+0000] {processor.py:161} INFO - Started process (PID=423) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:50:15.356+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:50:15.357+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:50:15.357+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:50:15.375+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:50:15.397+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:50:15.396+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:50:15.413+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:50:15.413+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:50:15.425+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.072 seconds
+[2026-04-07T06:50:45.507+0000] {processor.py:161} INFO - Started process (PID=428) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:50:45.508+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:50:45.508+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:50:45.508+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:50:45.521+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:50:45.546+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:50:45.546+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:50:45.562+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:50:45.562+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:50:45.576+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.071 seconds
+[2026-04-07T06:51:15.618+0000] {processor.py:161} INFO - Started process (PID=433) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:51:15.618+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:51:15.619+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:51:15.619+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:51:15.632+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:51:15.656+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:51:15.656+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:51:15.673+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:51:15.673+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:51:15.686+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.070 seconds
+[2026-04-07T06:51:45.768+0000] {processor.py:161} INFO - Started process (PID=438) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:51:45.768+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:51:45.769+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:51:45.769+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:51:45.781+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:51:45.802+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:51:45.802+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:51:45.818+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:51:45.818+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:51:45.831+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.066 seconds
+[2026-04-07T06:52:15.879+0000] {processor.py:161} INFO - Started process (PID=443) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:52:15.879+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:52:15.880+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:52:15.880+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:52:15.893+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:52:15.915+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:52:15.915+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:52:15.932+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:52:15.932+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:52:15.949+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.073 seconds
+[2026-04-07T06:52:46.028+0000] {processor.py:161} INFO - Started process (PID=448) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:52:46.028+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:52:46.029+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:52:46.029+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:52:46.041+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:52:46.062+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:52:46.062+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:52:46.078+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:52:46.078+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:52:46.091+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.066 seconds
+[2026-04-07T06:53:16.146+0000] {processor.py:161} INFO - Started process (PID=453) to work on /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:53:16.147+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2026-04-07T06:53:16.147+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:53:16.147+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:53:16.160+0000] {processor.py:840} INFO - DAG(s) 'customer_transactions_etl' retrieved from /opt/airflow/dags/pipeline_dag.py
+[2026-04-07T06:53:16.181+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:53:16.181+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-04-07T06:53:16.198+0000] {logging_mixin.py:188} INFO - [2026-04-07T06:53:16.198+0000] {dag.py:3823} INFO - Setting next_dagrun for customer_transactions_etl to 2026-04-07 02:00:00+00:00, run_after=2026-04-08 02:00:00+00:00
+[2026-04-07T06:53:16.211+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.067 seconds

@@ -1,0 +1,54 @@
+[2026-04-07T05:55:57.779+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_transactions_etl.transform_and_load manual__2026-04-07T05:50:17.058005+00:00 [queued]>
+[2026-04-07T05:55:57.785+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_transactions_etl.transform_and_load manual__2026-04-07T05:50:17.058005+00:00 [queued]>
+[2026-04-07T05:55:57.785+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2026-04-07T05:55:57.793+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): transform_and_load> on 2026-04-07 05:50:17.058005+00:00
+[2026-04-07T05:55:57.799+0000] {standard_task_runner.py:60} INFO - Started process 331 to run task
+[2026-04-07T05:55:57.801+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'customer_transactions_etl', 'transform_and_load', 'manual__2026-04-07T05:50:17.058005+00:00', '--job-id', '44', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpy0q4wka1']
+[2026-04-07T05:55:57.802+0000] {standard_task_runner.py:88} INFO - Job 44: Subtask transform_and_load
+[2026-04-07T05:55:57.837+0000] {task_command.py:423} INFO - Running <TaskInstance: customer_transactions_etl.transform_and_load manual__2026-04-07T05:50:17.058005+00:00 [running]> on host dd253c0ea888
+[2026-04-07T05:55:57.896+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-engineering' AIRFLOW_CTX_DAG_ID='customer_transactions_etl' AIRFLOW_CTX_TASK_ID='transform_and_load' AIRFLOW_CTX_EXECUTION_DATE='2026-04-07T05:50:17.058005+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-07T05:50:17.058005+00:00'
+[2026-04-07T05:56:36.588+0000] {pipeline_dag.py:141} INFO - :: loading settings :: url = jar:file:/opt/spark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+2026-04-07 05:56:11,425 [INFO] ============================================================
+2026-04-07 05:56:11,425 [INFO]   Customer Transactions ETL Job — START
+2026-04-07 05:56:11,425 [INFO] ============================================================
+2026-04-07 05:56:11,425 [INFO] Creating Spark session...
+2026-04-07 05:56:13,236 [INFO] Spark session created ✅
+2026-04-07 05:56:13,236 [INFO] Reading Delta table from /opt/data/delta-lake/customer_transactions ...
+2026-04-07 05:56:23,428 [INFO] Extracted 1,200 raw records ✅
+2026-04-07 05:56:23,428 [INFO] Parsing timestamp column...
+2026-04-07 05:56:23,445 [INFO] Deduplicating on transaction_id...
+2026-04-07 05:56:27,368 [INFO] Removed 62 duplicates (1,138 records remaining) ✅
+2026-04-07 05:56:27,368 [INFO] Filtering invalid amounts (amount <= 0)...
+2026-04-07 05:56:28,282 [INFO] Removed 35 invalid-amount rows (1,103 valid records) ✅
+2026-04-07 05:56:28,282 [INFO] Adding transaction_date column...
+2026-04-07 05:56:28,294 [INFO] Aggregating daily totals per customer...
+2026-04-07 05:56:29,448 [INFO] Aggregation complete — 1,057 (customer, date) combinations ✅
+2026-04-07 05:56:29,451 [INFO] Sample output:
++-----------+----------------+-----------+
+|customer_id|transaction_date|daily_total|
++-----------+----------------+-----------+
+|C00001     |2026-03-05      |1240.97    |
+|C00001     |2026-03-08      |122.52     |
+|C00001     |2026-03-16      |1834.84    |
+|C00001     |2026-03-17      |1953.11    |
+|C00002     |2026-02-17      |1447.63    |
+|C00002     |2026-02-23      |887.2      |
+|C00002     |2026-02-27      |1533.71    |
+|C00002     |2026-03-09      |1135.0     |
+|C00002     |2026-03-15      |2631.42    |
+|C00002     |2026-03-16      |1756.28    |
++-----------+----------------+-----------+
+only showing top 10 rows
+
+2026-04-07 05:56:30,541 [INFO] Running data quality checks...
+2026-04-07 05:56:32,815 [INFO] All data quality checks passed ✅
+2026-04-07 05:56:32,816 [INFO] Loading data into ScyllaDB transactions_ks.daily_customer_totals ...
+2026-04-07 05:56:36,247 [INFO] Successfully loaded 1,057 rows into ScyllaDB ✅
+2026-04-07 05:56:36,247 [INFO] 
+🎉  ETL Job completed successfully in 24.8s
+
+[2026-04-07T05:56:36.588+0000] {pipeline_dag.py:147} INFO - Spark ETL completed successfully ✅
+[2026-04-07T05:56:36.588+0000] {python.py:201} INFO - Done. Returned value was: None
+[2026-04-07T05:56:36.597+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=customer_transactions_etl, task_id=transform_and_load, execution_date=20260407T055017, start_date=20260407T055557, end_date=20260407T055636
+[2026-04-07T05:56:36.651+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-04-07T05:56:36.669+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

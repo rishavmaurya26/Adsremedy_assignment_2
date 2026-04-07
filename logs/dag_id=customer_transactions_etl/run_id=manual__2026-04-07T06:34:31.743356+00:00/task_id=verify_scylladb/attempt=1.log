@@ -1,0 +1,21 @@
+[2026-04-07T06:35:53.776+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_transactions_etl.verify_scylladb manual__2026-04-07T06:34:31.743356+00:00 [queued]>
+[2026-04-07T06:35:53.784+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_transactions_etl.verify_scylladb manual__2026-04-07T06:34:31.743356+00:00 [queued]>
+[2026-04-07T06:35:53.784+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2026-04-07T06:35:53.796+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): verify_scylladb> on 2026-04-07 06:34:31.743356+00:00
+[2026-04-07T06:35:53.810+0000] {standard_task_runner.py:60} INFO - Started process 276 to run task
+[2026-04-07T06:35:53.814+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'customer_transactions_etl', 'verify_scylladb', 'manual__2026-04-07T06:34:31.743356+00:00', '--job-id', '52', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpcstw10m7']
+[2026-04-07T06:35:53.816+0000] {standard_task_runner.py:88} INFO - Job 52: Subtask verify_scylladb
+[2026-04-07T06:35:53.866+0000] {task_command.py:423} INFO - Running <TaskInstance: customer_transactions_etl.verify_scylladb manual__2026-04-07T06:34:31.743356+00:00 [running]> on host dccb9b3821c0
+[2026-04-07T06:35:53.926+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-engineering' AIRFLOW_CTX_DAG_ID='customer_transactions_etl' AIRFLOW_CTX_TASK_ID='verify_scylladb' AIRFLOW_CTX_EXECUTION_DATE='2026-04-07T06:34:31.743356+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-07T06:34:31.743356+00:00'
+[2026-04-07T06:35:54.493+0000] {pipeline_dag.py:164} INFO - 
+ count
+-------
+  3716
+
+(1 rows)
+
+[2026-04-07T06:35:54.493+0000] {pipeline_dag.py:174} INFO - ScyllaDB verification passed ✅
+[2026-04-07T06:35:54.494+0000] {python.py:201} INFO - Done. Returned value was: None
+[2026-04-07T06:35:54.503+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=customer_transactions_etl, task_id=verify_scylladb, execution_date=20260407T063431, start_date=20260407T063553, end_date=20260407T063554
+[2026-04-07T06:35:54.550+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-04-07T06:35:54.570+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

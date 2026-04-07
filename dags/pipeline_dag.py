@@ -92,6 +92,17 @@ def run_docker_exec(cmd: list[str], task_name: str) -> str:
 # ─────────────────────────────────────────────────────────────────────────────
 def run_data_generation(**context):
     """Run generate_data.py inside spark_master via docker exec."""
+
+    #  Install required packages inside spark container automatically
+    log.info("Installing required packages in spark_master...")
+    subprocess.run(
+        ["docker", "exec", "spark_master", "pip", "install", "faker"],
+        capture_output=True,
+        text=True
+    )
+    log.info("faker installed ✅")
+
+
     log.info("Starting data generation...")
  
     cmd = [
@@ -143,7 +154,7 @@ def verify_scylladb_load(**context):
     result = subprocess.run(
         [
             "docker", "exec", "scylladb",
-            "cqlsh", "172.18.0.2", "9042",
+            "cqlsh", "scylladb", "9042",
             "-e", f"SELECT COUNT(*) FROM {SCYLLA_KEYSPACE}.{SCYLLA_TABLE};"
         ],
         capture_output=True,
