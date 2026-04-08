@@ -14,18 +14,7 @@
 
 ---
 
-## Prerequisites
 
-- Docker Desktop ≥ 24 with Docker Compose v2
-- 8 GB RAM available (4 GB minimum)
-- 10 GB free disk space
-- Git
-
-> **No local Python/Java/Spark needed** — everything runs in containers.
-
----
-
-## Quick Start (5 steps)
 
 ### Step 1 — Clone and create directory structure
 
